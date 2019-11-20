@@ -40,7 +40,7 @@ The Set-CsTeamsMobilityPolicy cmdlet allows administrators to update teams mobil
 ```powershell
 PS C:\> Set-CsTeamsMobilityPolicy -Identity SalesPolicy -IPVideoMobileMode "WifiOnly"
 ```
-The command shown in Example 1 uses the Set-CsTeamsMobilityPolicy cmdlet to update an existing teams mobility policy with the Identity SalesPolicy. This SalesPolicy will not have IPVideoMobileMode equal to "WifiOnly". 
+The command shown in Example 1 sets the IpVideoMobileMode flag to "WifiOnly" for the SalesPolicy. 
 
 ## PARAMETERS
 
@@ -90,7 +90,7 @@ Accept wildcard characters: False
 ```
 
 ### -IPAudioMobileMode
-When set to WifiOnly, prohibits the user from making, receiving calls or joining meetings using VoIP calls on the mobile device while on cellular data connection.
+When set to WifiOnly, prohibits the user from making, receiving calls or joining meetings using VoIP calls on the mobile device while on cellular data connection. Currently the supported options for this parameter are: "AllNeworks" and "WifiOnly".
 
 ```yaml
 Type: String
@@ -105,7 +105,7 @@ Accept wildcard characters: False
 ```
 
 ### -IPVideoMobileMode
-When set to WifiOnly, prohibits the user from making, receiving video calls or enabling video in meetings using VoIP calls on the mobile device while on cellular data connection.
+When set to WifiOnly, prohibits the user from making, receiving video calls or enabling video in meetings using VoIP calls on the mobile device while on cellular data connection. Currently the supported options for this parameter are: "AllNeworks" and "WifiOnly".
 
 ```yaml
 Type: String
